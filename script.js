@@ -59,8 +59,18 @@ if (contactForm) {
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Envoi en cours...';
         
         try {
-            // Simuler l'envoi (remplacez par votre logique d'envoi réelle)
+            // Envoyer vers info@tingo.tech (remplacez par votre logique d'envoi réelle)
+            // Pour l'instant, simulation - à remplacer par un vrai service d'envoi d'email
             await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // Tracking Google Analytics - Succès du formulaire
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Contact',
+                    'event_label': 'Demande de devis',
+                    'value': 1
+                });
+            }
             
             // Succès
             showNotification('Demande de devis envoyée avec succès ! Nous vous recontacterons rapidement.', 'success');
@@ -125,6 +135,16 @@ function showNotification(message, type = 'info') {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        
+        // Tracking Google Analytics - Navigation interne
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'navigation_click', {
+                'event_category': 'Navigation',
+                'event_label': this.getAttribute('href'),
+                'value': 1
+            });
+        }
+        
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const offsetTop = target.offsetTop - 70; // Ajuster pour la navbar fixe
@@ -260,6 +280,14 @@ function lazyLoadImages() {
 document.addEventListener('DOMContentLoaded', () => {
     lazyLoadImages();
     
+    // Tracking Google Analytics - Page vue
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+            'page_title': document.title,
+            'page_location': window.location.href
+        });
+    }
+    
     // Ajouter des classes d'animation aux éléments
     const featureItems = document.querySelectorAll('.feature-item');
     featureItems.forEach((item, index) => {
@@ -269,6 +297,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const advantageCards = document.querySelectorAll('.advantage-card');
     advantageCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    // Tracking des téléchargements de documentation
+    const docLinks = document.querySelectorAll('a[href="#"]');
+    docLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download', {
+                    'event_category': 'Documentation',
+                    'event_label': link.textContent.trim(),
+                    'value': 1
+                });
+            }
+        });
     });
 });
 

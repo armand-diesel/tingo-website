@@ -1,10 +1,13 @@
 [build]
   publish = "."
-  command = ""
 
-[build.environment]
-  NODE_VERSION = "18"
+# Configuration pour le domaine personnalisé
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
+# Headers de sécurité
 [[headers]]
   for = "/*"
   [headers.values]
@@ -14,6 +17,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Cache et performance
 [[headers]]
   for = "*.css"
   [headers.values]
@@ -29,16 +33,12 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Compression
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Encoding = "gzip"
 
-[context.production.environment]
-  NODE_ENV = "production"
-
-[context.deploy-preview.environment]
-  NODE_ENV = "preview"
-
-[context.branch-deploy.environment]
-  NODE_ENV = "development"
+# Support du domaine personnalisé
+[build.environment]
+  NODE_VERSION = "18"
