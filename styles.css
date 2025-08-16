@@ -1,0 +1,488 @@
+/* Styles personnalisés pour Tingo - Complément à Bootstrap */
+
+/* Variables CSS personnalisées */
+:root {
+    --tingo-primary: #000000;
+    --tingo-secondary: #2ecc71;
+    --tingo-warning: #2ecc71;
+    --tingo-success: #27ae60;
+    --tingo-info: #3498db;
+    --tingo-dark: #000000;
+    --tingo-light: #f8f9fa;
+    --tingo-gradient: linear-gradient(135deg, #000000 0%, #2ecc71 100%);
+}
+
+/* Typographie personnalisée */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .fw-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Navigation personnalisée */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--tingo-primary) !important;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--tingo-secondary) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--tingo-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons .btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Device Mockup */
+.device-frame {
+    display: inline-block;
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+.device-frame:hover {
+    transform: perspective(1000px) rotateY(-10deg) rotateX(2deg);
+}
+
+.device-screen {
+    width: 280px;
+    height: 400px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.time-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--tingo-primary);
+}
+
+.status-badges .badge {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--tingo-primary), var(--tingo-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Feature Items */
+.feature-item {
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-number {
+    width: 60px;
+    height: 60px;
+    background: var(--tingo-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Advantage Cards */
+.advantage-card {
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+}
+
+.advantage-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--tingo-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.advantage-card:hover .advantage-icon {
+    background: var(--tingo-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.testimonial-rating {
+    color: var(--tingo-secondary);
+}
+
+.testimonial-author {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+
+/* Documentation Cards */
+.doc-card {
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.doc-icon {
+    color: var(--tingo-primary);
+    transition: transform 0.3s ease;
+}
+
+.doc-card:hover .doc-icon {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+.form-control:focus {
+    border-color: var(--tingo-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25);
+}
+
+.btn-warning {
+    background: var(--tingo-secondary);
+    border-color: var(--tingo-secondary);
+    color: white;
+    font-weight: 700;
+}
+
+.btn-warning:hover {
+    background: #27ae60;
+    border-color: #27ae60;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Footer */
+.footer-brand {
+    color: var(--tingo-secondary);
+}
+
+.footer-brand .fs-5 {
+    font-size: 1.25rem !important;
+}
+
+.footer h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer ul li {
+    margin-bottom: 0.25rem;
+}
+
+.footer .small {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--tingo-secondary) !important;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Classes d'animation */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .device-frame {
+        transform: none;
+        margin-top: 2rem;
+    }
+    
+    .device-frame:hover {
+        transform: none;
+    }
+    
+    .feature-item {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-number {
+        margin: 0 auto 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .device-screen {
+        width: 250px;
+        height: 350px;
+        padding: 20px;
+    }
+    
+    .time-display {
+        font-size: 2rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tingo-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--tingo-secondary);
+}
+
+/* Effets de hover pour les cartes */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Boutons personnalisés */
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Section headers */
+.display-5 {
+    font-weight: 700;
+    color: var(--tingo-primary);
+}
+
+.lead {
+    font-weight: 400;
+    color: #6c757d;
+}
+
+/* Badges et étiquettes */
+.badge {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Formulaires */
+.form-label {
+    color: var(--tingo-primary);
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--tingo-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.15);
+}
+
+/* Navigation mobile */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Effets de parallaxe légers */
+.hero-section {
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
+/* Optimisations de performance */
+.card, .btn, .form-control {
+    will-change: transform;
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
