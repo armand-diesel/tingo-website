@@ -33,12 +33,6 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Compression
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Encoding = "gzip"
-
 # Support du domaine personnalisé
 [build.environment]
   NODE_VERSION = "18"

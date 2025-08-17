@@ -1,14 +1,19 @@
-# 🚨 Tingo - Site Web Marketing
+# 🌐 Site Web Tingo - Système d'Alarme Automatique Scolaire
 
 Site vitrine et landing page pour **Tingo**, le système d'alarme automatique scolaire moderne et fiable.
 
-## 🌐 **Informations du site**
+Site web professionnel et moderne présentant **Tingo**, un système intelligent de gestion des sonneries scolaires basé sur ESP32. Le site est conçu comme une **landing page + site vitrine** pour présenter le produit, ses fonctionnalités et permettre aux établissements éducatifs de demander un devis.
 
-- **URL principale** : [tingo.tech](https://tingo.tech)
-- **Email de contact** : [info@tingo.tech](mailto:info@tingo.tech)
-- **Produit** : Système d'Alarme Automatique Scolaire
+## ✨ Fonctionnalités du Site
 
-## 🎯 **Objectif du site**
+### 🎯 **Structure Principale (Landing Page)**
+- **Hero Section** : Nom "Tingo" + slogan impactant + mockup du dispositif
+- **Description** : Présentation claire du produit et de ses avantages
+- **Fonctionnalités** : 4 points clés du système avec numérotation
+- **Avantages Écoles** : Bénéfices concrets (économies, gain de temps, efficacité, satisfaction)
+- **Témoignages** : Cas d'usage réels avec évaluations 5 étoiles
+- **Contact/Devis** : Formulaire de demande de devis personnalisé
+- **Documentation** : Espace technique avec guides téléchargeables
 
 Site vitrine + landing page présentant :
 - **Nom & slogan** de Tingo
@@ -54,49 +59,48 @@ tingo-website/
 
 ## 🚀 **Déploiement**
 
-### **Netlify (Recommandé)**
-1. Connectez votre repository GitHub
-2. Configurez le domaine personnalisé : `tingo.tech`
-3. Déployez automatiquement à chaque push
+### **Palette de Couleurs Tingo**
+- **Primaire** : #000000 (Noir) - Élégance et professionnalisme
+- **Secondaire** : #2ecc71 (Vert émeraude) - Innovation et croissance
+- **Success** : #27ae60 (Vert foncé) - Validation et succès
+- **Info** : #3498db (Bleu) - Information et confiance
+- **Dark** : #000000 (Noir) - Texte principal et contraste
+- **Light** : #f8f9fa (Gris clair) - Arrière-plans et espacement
 
 ### **Configuration requise**
 - **Build command** : Aucune (site statique)
 - **Publish directory** : `.` (racine)
 - **Node version** : 18+ (définie dans `netlify.toml`)
 
-## 📊 **Analytics et suivi**
+### **Responsive Design**
+- **Mobile First** : Approche mobile-first de Bootstrap
+- **Breakpoints** : Bootstrap 5 (576px, 768px, 992px, 1200px, 1400px)
+- **Flexibilité** : Grid Bootstrap et Flexbox adaptatifs
 
-### **Google Analytics 4**
-- **ID de mesure** : `G-01HBG1JP26`
-- **Tracking automatique** des pages vues
-- **Événements personnalisés** pour les conversions
-- **Suivi des formulaires** de contact
-- **Navigation interne** et téléchargements
+## 🚀 Installation et Déploiement
 
-### **Événements trackés**
-- `page_view` - Visites de pages
-- `form_submit` - Soumissions de formulaire
-- `navigation_click` - Clics sur la navigation
-- `download` - Demandes de documentation
+### **Déploiement Local**
+1. Clonez le repository
+2. Ouvrez `index.html` dans votre navigateur
+3. Ou utilisez un serveur local (Live Server VS Code)
 
-## 🔧 **Personnalisation**
+### **Déploiement Web**
+1. **Netlify** : Glissez-déposez le dossier (configuration incluse)
+2. **GitHub Pages** : Push vers une branche gh-pages
+3. **Vercel** : Import depuis GitHub
+4. **Serveur classique** : Upload via FTP
 
-### **Modifier les couleurs**
-Éditez les variables CSS dans `styles.css` :
-```css
-:root {
-    --tingo-primary: #000000;
-    --tingo-secondary: #2ecc71;
-    /* ... autres couleurs ... */
-}
+### **Configuration Recommandée**
+```bash
+# Serveur local avec Python
+python -m http.server 8000
+
+# Serveur local avec Node.js
+npx serve .
+
+# Serveur local avec PHP
+php -S localhost:8000
 ```
-
-### **Ajouter du contenu**
-- **Nouvelles sections** : Ajoutez dans `index.html`
-- **Styles** : Définissez dans `styles.css`
-- **Interactions** : Implémentez dans `script.js`
-
-## 📱 **Responsive Design**
 
 - **Mobile-first** avec Bootstrap 5
 - **Breakpoints** : xs, sm, md, lg, xl, xxl
@@ -163,33 +167,55 @@ tingo-website/
 - **Google Fonts** : Optimisations de performance
 - **Analytics** : Nouvelles fonctionnalités GA4
 
-### **Monitoring**
-- **Uptime** : Netlify Status
-- **Performance** : Google Analytics
-- **Erreurs** : Console JavaScript
-- **SEO** : Google Search Console
-
-## 📞 **Support et contact**
-
-- **Email technique** : [info@tingo.tech](mailto:info@tingo.tech)
-- **Site web** : [tingo.tech](https://tingo.tech)
-- **Documentation** : Disponible sur le site
+### **Intégrations Recommandées**
+- **Google Analytics** : Suivi des visiteurs
+- **Google Search Console** : Performance SEO
+- **Hotjar** : Analyse du comportement utilisateur
+- **Uptime Robot** : Surveillance de disponibilité
 
 ## 📄 **Licence**
 
 Ce projet est sous licence **GNU General Public License v3.0** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## 🤝 **Contribution**
+### **Améliorations Techniques**
+- **PWA** : Application web progressive
+- **Service Worker** : Mise en cache offline
+- **Web Components** : Composants réutilisables
+- **TypeScript** : Typage statique
+- **Build Tools** : Webpack/Vite pour production
 
-Les contributions sont les bienvenues ! Pour contribuer :
+## 🤝 Contribution
 
+### **Comment Contribuer**
 1. **Fork** le repository
 2. **Créez** une branche pour votre fonctionnalité
 3. **Commitez** vos changements
 4. **Poussez** vers la branche
 5. **Ouvrez** une Pull Request
 
-## 🎉 **Remerciements**
+### **Standards de Code**
+- **HTML** : Sémantique et accessible avec Bootstrap
+- **CSS** : Variables CSS et classes utilitaires
+- **JavaScript** : ES6+ avec commentaires
+- **Git** : Messages de commit clairs
+
+## 📞 Support et Contact
+
+### **Questions Techniques**
+- **Issues GitHub** : Pour les bugs et demandes
+- **Discussions** : Pour les questions générales
+- **Wiki** : Documentation détaillée
+
+### **Contact Projet**
+- **Email** : contact@tingo-project.com
+- **Site** : [www.tingo-project.com](https://www.tingo-project.com)
+- **GitHub** : [github.com/tingo-project](https://github.com/tingo-project)
+
+## 📄 Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier `LICENSE` pour plus de détails.
+
+## 🙏 Remerciements
 
 - **Bootstrap** pour le framework CSS
 - **Font Awesome** pour les icônes
