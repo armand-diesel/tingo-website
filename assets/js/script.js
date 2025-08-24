@@ -239,7 +239,7 @@ document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         document.title = '👋 Revenez sur Tingo !';
     } else {
-        document.title = 'Tingo - Système d\'Alarme Automatique Scolaire';
+        document.title = 'Tingo - Système Automatique de Sonnerie Scolaire';
     }
 });
 

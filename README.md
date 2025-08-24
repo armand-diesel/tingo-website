@@ -1,6 +1,6 @@
-# 🌐 Site Web Tingo - Système d'Alarme Automatique Scolaire
+# 🌐 Site Web Tingo - Système Automatique de Sonnerie Scolaire
 
-Site vitrine et landing page pour **Tingo**, le système d'alarme automatique scolaire moderne et fiable.
+Site vitrine et landing page pour **Tingo**, le système automatique de sonnerie scolaire moderne et fiable.
 
 Site web professionnel et moderne présentant **Tingo**, un système intelligent de gestion des sonneries scolaires basé sur ESP32. Le site est conçu comme une **landing page + site vitrine** pour présenter le produit, ses fonctionnalités et permettre aux établissements éducatifs de demander un devis.
 
@@ -11,7 +11,8 @@ Site web professionnel et moderne présentant **Tingo**, un système intelligent
 - **Description** : Présentation claire du produit et de ses avantages
 - **Fonctionnalités** : 4 points clés du système avec numérotation
 - **Avantages Écoles** : Bénéfices concrets (économies, gain de temps, efficacité, satisfaction)
-- **Témoignages** : Cas d'usage réels avec évaluations 5 étoiles
+- **Écoles Partenaires** ⭐ **NOUVEAU !** : Section "Ils Utilisent Tingo" avec 2 établissements togolais équipés
+- **Témoignages Clients** : Cas d'usage réels avec évaluations 5 étoiles
 - **Contact/Devis** : Formulaire de demande de devis personnalisé
 - **Documentation** : Espace technique avec guides téléchargeables
 
@@ -45,13 +46,41 @@ Site vitrine + landing page présentant :
 - **Variantes** : 300, 400, 500, 600, 700
 - **Hiérarchie** : Utilisation cohérente des classes Bootstrap
 
+### **Logo et identité**
+- **Logo principal** : `tingo.png` - Intégré dans la navbar et le footer
+- **Taille navbar** : 40px de hauteur
+- **Taille footer** : 30px de hauteur
+- **Format** : PNG avec transparence
+- **Favicon** : `favicon.ico` - Icône de l'onglet du navigateur
+
+### **Palette de couleurs appliquée**
+- **Footer** : Fond vert (`bg-success`) avec votre palette Tingo
+- **Section "Qu'est-ce que Tingo"** : Icônes en blanc sur fond vert circulaire
+- **Section "Pourquoi Choisir Tingo"** : Effets hover en vert au lieu du noir
+- **Section Documentation** : Icônes vertes et boutons avec contours verts
+- **Bouton formulaire** : Noir avec effet hover vert
+- **Cohérence visuelle** : Utilisation de `var(--tingo-secondary)` partout
+
+### **Effets hover avancés** ✨
+- **Icônes d'avantages** : Changement de couleur en vert au survol
+- **Animation des icônes** : Scale + ombre verte + effet de brillance
+- **Transitions fluides** : 0.3s ease sur tous les éléments interactifs
+- **Effet de profondeur** : Ombres et transformations au survol
+
 ## 📁 **Structure des fichiers**
 
 ```
 tingo-website/
 ├── index.html          # Page principale
-├── styles.css          # Styles personnalisés
-├── script.js           # JavaScript et interactions
+├── assets/             # Ressources du site
+│   ├── css/            # Styles personnalisés
+│   │   └── styles.css  # CSS principal
+│   ├── js/             # JavaScript
+│   │   └── script.js   # JS principal
+│   └── img/            # Images et logos
+│       ├── tingo.png   # Logo Tingo
+│       ├── logo.png    # Logo alternatif
+│       └── favicon.ico # Favicon du site
 ├── README.md           # Documentation du projet
 ├── netlify.toml        # Configuration Netlify
 └── LICENSE             # Licence GNU GPL

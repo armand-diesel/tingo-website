@@ -3,7 +3,7 @@
 /* Variables CSS personnalisées */
 :root {
     --tingo-primary: #000000;
-    --tingo-secondary: #2ecc71;
+    --tingo-secondary:   #1DB954;                  /*  #2ecc71; */
     --tingo-warning: #2ecc71;
     --tingo-success: #27ae60;
     --tingo-info: #3498db;
@@ -485,4 +485,196 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ===== NOUVELLE SECTION : ÉCOLES PARTENAIRES ===== */
+
+/* Cartes des écoles partenaires */
+.school-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--tingo-secondary);
+}
+
+.school-icon {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.school-card:hover .school-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.school-status .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Statistiques des partenaires */
+.partners-stats {
+    background: linear-gradient(135deg, var(--tingo-secondary) 0%, #27ae60 100%);
+    border: 1px solid var(--tingo-secondary);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Responsive pour les cartes d'écoles */
+@media (max-width: 768px) {
+    .school-card {
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+    
+    .partners-stats {
+        padding: 1.5rem !important;
+    }
+}
+
+/* ===== EFFETS HOVER PERSONNALISÉS ===== */
+
+/* Hover sur les cartes d'avantages */
+.advantage-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.2) !important;
+}
+
+.advantage-card:hover .advantage-icon i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    color: var(--tingo-secondary) !important;
+}
+
+/* Hover spécifique sur les icônes d'avantages */
+.advantage-card .advantage-icon i {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.advantage-card:hover .advantage-icon i.text-success,
+.advantage-card:hover .advantage-icon i.text-primary,
+.advantage-card:hover .advantage-icon i.text-secondary,
+.advantage-card:hover .advantage-icon i.text-info {
+    color: var(--tingo-secondary) !important;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+/* Animation subtile sur les icônes au hover */
+.advantage-card:hover .advantage-icon i::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover .advantage-icon i::after {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Hover sur le bouton du formulaire */
+.btn-dark:hover {
+    background-color: var(--tingo-secondary) !important;
+    border-color: var(--tingo-secondary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Icônes de la section description avec fond vert */
+.feature-icon i.bg-success {
+    background: var(--tingo-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.feature-icon:hover i.bg-success {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Footer en vert avec ajustements */
+footer.bg-success {
+    background: var(--tingo-secondary) !important;
+}
+
+footer .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer a.text-muted:hover {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+/* ===== SECTION DOCUMENTATION ===== */
+
+/* Cartes de documentation */
+.doc-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.15) !important;
+}
+
+/* Icônes de documentation */
+.doc-icon i.text-success {
+    transition: all 0.3s ease;
+}
+
+.doc-card:hover .doc-icon i.text-success {
+    transform: scale(1.1);
+    color: var(--tingo-secondary) !important;
+}
+
+/* Boutons de documentation */
+.doc-card .btn-outline-success {
+    border-color: var(--tingo-secondary);
+    color: var(--tingo-secondary);
+    transition: all 0.3s ease;
+}
+
+.doc-card .btn-outline-success:hover {
+    background-color: var(--tingo-secondary);
+    border-color: var(--tingo-secondary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
 }
